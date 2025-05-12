@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clasa mașină și Obiecte</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="container">
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+    <h1 class="titlu">Clasa mașină</h1>
+    <div class="clasa-masina">
+      <div class="atribute-masina">
+        <span class="subtitlu"><b>Atribute</b></span><br>
+        Marca<br>
+        Model<br>
+        An fabricație<br><br>
+        <span class="subtitlu"><b>Metode</b></span><br>
+        Accelerează<br>
+        Frânează
+      </div>
+      <div class="masina-img">
+        <img src="https://desene-colorat.ro/wp-content/uploads/2022/10/Masina-Simpla.jpg" alt="Desen mașină" />
+      </div>
+    </div>
+
+    <h2 class="titlu" style="margin-top: 48px;">Obiecte</h2>
+    <div class="obiecte-masina">
+      <div class="obiecte-poze">
+        <div class="obiect">
+          <img src="https://www.cnet.com/a/img/resize/dda39600396c7cd4832997011acb234f6dd0792e/hub/2018/07/24/763e5798-4267-41ff-abe8-42155f8fc910/audi-a4-quattro-2018-social.jpg?auto=webp&fit=crop&height=900&width=1200" alt="Audi A4" />
+        </div>
+        <div class="obiect">
+          <img src="https://www.motortrend.com/uploads/sites/10/2017/11/2018-volkswagen-passat-r-line-sedan-angular-front.png" alt="Volkswagen Passat" />
+        </div>
+        <div class="obiect">
+          <img src="https://www.motortrend.com/uploads/sites/10/2017/12/2018-bmw-x5-xdrive35d-suv-angular-front.png" alt="BMW X5" />
+        </div>
+      </div>
+      <div class="obiecte-info">
+        <div class="descriere">
+          Marca: Audi<br>
+          Model: A4<br>
+          An fabricație: 2018
+        </div>
+        <div class="descriere">
+          Marca: Volkswagen<br>
+          Model: Passat<br>
+          An fabricație: 2017
+        </div>
+        <div class="descriere">
+          Marca: BMW<br>
+          Model: X5<br>
+          An fabricație: 2018
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script>
+    document.getElementById('logoutBtn').addEventListener('click', function() {
+      window.location.href = "login.html";
+    });
+  </script>
+</body>
+</html>

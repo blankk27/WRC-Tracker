@@ -1,0 +1,117 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.register-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0d1d4a 0%, #263d8a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-box {
+  background: #fff;
+  padding: 38px 36px 28px 36px;
+  border-radius: 18px;
+  box-shadow: 0 8px 40px rgba(13, 29, 74, 0.18);
+  min-width: 340px;
+  max-width: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+
+.register-box:hover {
+  box-shadow: 0 12px 48px 4px rgba(38, 61, 138, 0.20);
+}
+
+.register-box h2 {
+  margin-bottom: 22px;
+  font-weight: 800;
+  color: #1a237e;
+  letter-spacing: 1px;
+  font-size: 26px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  align-items: center;
+}
+
+input[type="text"] {
+  width: 90%;
+  padding: 13px 15px;
+  border: 1.7px solid #263d8a;
+  border-radius: 7px;
+  font-size: 16px;
+  background: #f6f7fb;
+  transition: border 0.2s, box-shadow 0.2s;
+  outline: none;
+  color: #122249;
+  box-shadow: 0 2px 8px rgba(38, 61, 138, 0.04);
+}
+
+input[type="text"]:focus {
+  border: 2px solid #1a237e;
+  background: #e9eeff;
+  box-shadow: 0 4px 16px rgba(38, 61, 138, 0.10);
+}
+
+.error-message {
+  color: #e84118;
+  font-size: 15px;
+  min-height: 20px;
+  margin-bottom: -5px;
+  padding-left: 2px;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+button[type="submit"] {
+  width: 94%;
+  background: linear-gradient(90deg, #263d8a, #0d1d4a);
+  color: #fff;
+  padding: 13px 0;
+  border: none;
+  border-radius: 7px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 8px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 12px rgba(38, 61, 138, 0.10);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(90deg, #0d1d4a, #263d8a);
+  box-shadow: 0 6px 24px rgba(38, 61, 138, 0.13);
+}
+
+.redirect-login {
+  margin-top: 24px;
+  font-size: 15px;
+  color: #263d8a;
+}
+
+.redirect-login a {
+  color: #263d8a;
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 3px;
+  transition: color 0.18s;
+}
+
+.redirect-login a:hover {
+  color: #f27c1e;
+  text-decoration: underline;
+}

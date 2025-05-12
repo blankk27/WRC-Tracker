@@ -1,0 +1,56 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.logout-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a2a6c 0%, #173276 80%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout-box {
+  background: #fff;
+  padding: 44px 38px 32px 38px;
+  border-radius: 20px;
+  box-shadow: 0 8px 40px rgba(13, 29, 74, 0.18);
+  width: 370px;
+  max-width: 92vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logout-box h2 {
+  margin-bottom: 26px;
+  font-weight: 700;
+  color: #1a237e;
+  font-size: 1.45rem;
+  text-align: center;
+}
+
+#logoutBtn {
+  width: 100%;
+  background: linear-gradient(90deg, #263d8a, #0d1d4a);
+  color: #fff;
+  padding: 14px 0;
+  border: none;
+  border-radius: 7px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 12px rgba(38, 61, 138, 0.10);
+  transition: background 0.2s, box-shadow 0.2s;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+#logoutBtn:hover {
+  background: linear-gradient(90deg, #0d1d4a, #263d8a);
+  box-shadow: 0 6px 24px rgba(38, 61, 138, 0.13);
+}

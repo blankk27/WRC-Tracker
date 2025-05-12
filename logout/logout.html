@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logout</title>
+  <link rel="stylesheet" href="logout.css">
+</head>
+<body>
+  <div class="logout-bg">
+    <div class="logout-box">
+      <h2>Ești sigur că vrei să te deloghezi?</h2>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </div>
+  <script>
+    document.getElementById('logoutBtn').addEventListener('click', function() {
+      // Aici poți adăuga orice cod suplimentar pentru ștergerea sesiunii, dacă este cazul
+      window.location.href = "../login/login.html";
+    });
+  </script>
+</body>
+</html>

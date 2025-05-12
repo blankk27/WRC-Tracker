@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="login-bg">
+    <div class="login-box">
+      <h2>Login</h2>
+      <form id="loginForm" autocomplete="off">
+        <input type="text" id="nume" name="nume" placeholder="Numele" required>
+        <input type="text" id="prenume" name="prenume" placeholder="Prenumele" required>
+        <input type="password" id="parola" name="parola" placeholder="Parola" required>
+        <span class="error-message" id="error-message"></span>
+        <button type="submit">Autentificare</button>
+      </form>
+      <div class="redirect-register">
+        Nu ai cont? <a href="../register/register.html">Înregistrează-te</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const nume = document.getElementById('nume');
+      const prenume = document.getElementById('prenume');
+      const parola = document.getElementById('parola');
+      const errorMsg = document.getElementById('error-message');
+
+      // Verificare: nume începe cu literă mare și conține doar litere
+      if (!/^[A-ZĂÂÎȘȚ][a-zăâîșț]+$/.test(nume.value.trim())) {
+        errorMsg.textContent = "Numele trebuie să înceapă cu literă mare și să conțină doar litere!";
+        nume.focus();
+        return;
+      }
+
+      // Verificare: prenume începe cu literă mare și conține doar litere
+      if (!/^[A-ZĂÂÎȘȚ][a-zăâîșț]+$/.test(prenume.value.trim())) {
+        errorMsg.textContent = "Prenumele trebuie să înceapă cu literă mare și să conțină doar litere!";
+        prenume.focus();
+        return;
+      }
+
+      // Verificare dacă parola nu este goală
+      if (!parola.value.trim()) {
+        errorMsg.textContent = "Introduceți parola!";
+        parola.focus();
+        return;
+      }
+
+      // Dacă toate verificările trec, redirecționează către main.html
+      errorMsg.textContent = "";
+      window.location.href = "main.html";
+    });
+  </script>
+</body>
+</html>
