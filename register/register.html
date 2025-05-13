@@ -8,20 +8,29 @@
 </head>
 <body>
   <div class="register-bg">
-    <div class="register-box">
-      <h2>Înregistrare</h2>
-      <form id="registerForm" autocomplete="off">
-        <input type="text" id="nume" name="nume" placeholder="Numele" required>
-        <input type="text" id="prenume" name="prenume" placeholder="Prenumele" required>
-        <input type="text" id="telefon" name="telefon" placeholder="Telefon (+373...)" required>
-        <span class="error-message" id="error-message"></span>
-        <button type="submit">Înregistrează-te</button>
-      </form>
+    <form class="register-form" id="registerForm" autocomplete="off">
+      <div class="form-row">
+        <label for="nume">Nume</label>
+        <div class="form-input-double">
+          <input type="text" id="nume" name="nume" placeholder="Nume" required>
+          <input type="text" id="prenume" name="prenume" placeholder="Prenume" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="exemplu@email.com" required>
+      </div>
+      <div class="form-row">
+        <label for="telefon">Telefon</label>
+        <input type="text" id="telefon" name="telefon" placeholder="Număr de telefon" maxlength="20" required>
+      </div>
+      <span class="error-message" id="error-message"></span>
+      <button type="submit">Înregistrează-te</button>
       <div class="redirect-login">
         Ai deja cont? <a href="../login/login.html">Login</a>
       </div>
-    </div>
+    </form>
   </div>
-  <script src="register.js"></script>
+  <script src="../register.js"></script>
 </body>
 </html>

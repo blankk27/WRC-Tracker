@@ -37,5 +37,5 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
   }));
 
   // Redirecționează către pagina de login
-  window.location.href = "login.html";
+  window.location.href = "/login/login.html";
 });
