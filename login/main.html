@@ -13,14 +13,7 @@
 <header class="navbar">
   <div class="container nav-container">
     <div class="logo-area">
-      <span class="logo-svg">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-          <rect x="2" y="8" width="10" height="16" rx="2" stroke="#f27c1e" stroke-width="2"/>
-          <rect x="20" y="8" width="10" height="16" rx="2" stroke="#f27c1e" stroke-width="2"/>
-          <path d="M12 12L16 16L20 12" stroke="#f27c1e" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </span>
-      <span class="logo-text">World Rally <b>Championship</b></span>
+      <img src="logo-wrc.png" alt="World Rally Logo" class="logo-img" />
     </div>
     <nav>
       <ul class="nav-links">
@@ -36,6 +29,7 @@
   </div>
 </header>
 
+
 <main>
   <!-- HERO Section adaptat WRC -->
   <section class="hero hero-wrc">
@@ -49,146 +43,82 @@
         <button class="comment-btn comment-btn-wrc" onclick="window.location.href='#categorii'">Vezi Clasamentele!</button>
       </div>
       <div class="hero-image hero-image-wrc">
-        <img src="https://www.wrc.com/-/media/image/wrc/car-action.jpg" alt="Mașină de raliu în acțiune">
+        <img src="./WRC_Central_European_Rallye_2023_Nr._8__4_-removebg-preview.png" alt="Mașină de raliu în acțiune">
       </div>
     </div>
   </section>
 
-  <!-- CATEGORII WRC -->
-  <section class="categories" id="categorii">
+  <section class="wrc-timer-section">
     <div class="container">
-      <div class="header-row">
-        <div class="left-header">
-          <h2>Categoriile WRC</h2>
-          <p class="subtitle">Explorează categoriile principale din Campionatul Mondial de Raliuri</p>
-        </div>
-        <div class="right-header">
-          <button class="all-categories-btn">Toate Categoriile</button>
-        </div>
-      </div>
-      <div class="grid grid-wrc">
-        <div class="cat-box">
-          <span class="cat-icon"><i class="fas fa-flag-checkered"></i></span>
-          <div>
-            <div class="cat-title">Clasament General</div>
-            <div class="cat-sub">Toți piloții și echipele</div>
-          </div>
-        </div>
-        <div class="cat-box active">
-          <span class="cat-icon"><i class="fas fa-car-side"></i></span>
-          <div>
-            <div class="cat-title">Echipe WRC</div>
-            <div class="cat-sub">Top constructori</div>
-          </div>
-        </div>
-        <div class="cat-box">
-          <span class="cat-icon"><i class="fas fa-user-helmet-safety"></i></span>
-          <div>
-            <div class="cat-title">Piloți</div>
-            <div class="cat-sub">Performanțe individuale</div>
-          </div>
-        </div>
-        <div class="cat-box">
-          <span class="cat-icon"><i class="fas fa-calendar-alt"></i></span>
-          <div>
-            <div class="cat-title">Evenimente</div>
-            <div class="cat-sub">Etape & Raliuri</div>
-          </div>
-        </div>
-        <div class="cat-box">
-          <span class="cat-icon"><i class="fas fa-stopwatch"></i></span>
-          <div>
-            <div class="cat-title">Rezultate Live</div>
-            <div class="cat-sub">Actualizări în timp real</div>
-          </div>
-        </div>
-        <div class="cat-box">
-          <span class="cat-icon"><i class="fas fa-map-marked-alt"></i></span>
-          <div>
-            <div class="cat-title">Trasee</div>
-            <div class="cat-sub">Etape spectaculoase</div>
-          </div>
-        </div>
-        <div class="cat-box">
-          <span class="cat-icon"><i class="fas fa-trophy"></i></span>
-          <div>
-            <div class="cat-title">Podium</div>
-            <div class="cat-sub">Câștigători & recorduri</div>
-          </div>
-        </div>
-        <div class="cat-box">
-          <span class="cat-icon"><i class="fas fa-wrench"></i></span>
-          <div>
-            <div class="cat-title">Mașini & Tehnologie</div>
-            <div class="cat-sub">Noile modele</div>
-          </div>
-        </div>
-        <div class="cat-box">
-          <span class="cat-icon"><i class="fas fa-film"></i></span>
-          <div>
-            <div class="cat-title">Galerie Video</div>
-            <div class="cat-sub">Momente de top</div>
-          </div>
-        </div>
-        <div class="cat-box">
-          <span class="cat-icon"><i class="fas fa-users"></i></span>
-          <div>
-            <div class="cat-title">Fani & Comunitate</div>
-            <div class="cat-sub">Votează-ți favoriții</div>
-          </div>
-        </div>
+      <div class="wrc-timer-content">
+        <h2 class="wrc-timer-title">Time Until Next Rally</h2>
+        <div id="wrcCountdown" class="wrc-timer-countdown"></div>
       </div>
     </div>
   </section>
-
-  <!-- Echipe și Mașini -->
-  <section class="wrc-section">
-    <div class="container wrc-container">
-      <h2 class="titlu-el">Echipe și Mașini 2025</h2>
-      <div class="echipe-masini-el">
-        <div class="echipe-poze-el">
-          <div class="echipa-el">
-            <img src="https://www.wrc.com/-/media/image/wrc/teams/toyota-2025.jpg" alt="Toyota Gazoo Racing 2025" />
-          </div>
-          <div class="echipa-el">
-            <img src="https://www.wrc.com/-/media/image/wrc/teams/hyundai-2025.jpg" alt="Hyundai Motorsport 2025" />
-          </div>
-          <div class="echipa-el">
-            <img src="https://www.wrc.com/-/media/image/wrc/teams/ford-2025.jpg" alt="M-Sport Ford 2025" />
-          </div>
-        </div>
-        <div class="echipe-info-el">
-          <div class="descriere-el">
-            Echipa: Toyota Gazoo Racing<br>
-            Model: GR Yaris Rally1 Hybrid<br>
-            Categoria: WRC 2025
-          </div>
-          <div class="descriere-el">
-            Echipa: Hyundai Motorsport<br>
-            Model: i20 N Rally1 Hybrid<br>
-            Categoria: WRC 2025
-          </div>
-          <div class="descriere-el">
-            Echipa: M-Sport Ford<br>
-            Model: Puma Rally1 Hybrid<br>
-            Categoria: WRC 2025
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Secțiunea "Echipe și Mașini 2025" a fost eliminată -->
 </main>
+
+<section class="wrc-calendar-section">
+  <div class="container">
+    <h2 class="wrc-calendar-title">WRC 2025 Calendar</h2>
+    <div class="wrc-calendar-grid">
+      <!-- Event 1 -->
+      <div class="wrc-calendar-card">
+        <div class="wrc-calendar-img" style="background-image: url('https://img.redbull.com/images/c_fill,g_auto,w_400,h_444/q_auto,f_auto/redbullcom/2025/2/5/p8ifmjceehlwj0rqp7sk/wrc-rallye-monte-carlo-2025');"></div>
+        <div class="wrc-calendar-body">
+          <h3>WRC Rally Monte-Carlo 2025</h3>
+          <div class="wrc-calendar-date"><i class="fa-regular fa-calendar"></i> 22 – 26 January 2025</div>
+          <div class="wrc-calendar-place">
+            <img class="wrc-flag" src="https://resources.redbull.com/icons/flags/v2/MC@2x.png" alt="Monaco" title="Monaco"/>
+            <span>Monte-Carlo</span>
+          </div>
+        </div>
+      </div>
+      <!-- Event 2 -->
+      <div class="wrc-calendar-card">
+        <div class="wrc-calendar-img" style="background-image: url('https://img.redbull.com/images/c_fill,g_auto,w_400,h_444/q_auto,f_auto/redbullcom/2025/2/5/jimnpevhg5sdcmho3pd7/s-i202402160567');"></div>
+        <div class="wrc-calendar-body">
+          <h3>WRC Rally Sweden Stockholm 2025</h3>
+          <div class="wrc-calendar-date"><i class="fa-regular fa-calendar"></i> 12 – 16 February 2025</div>
+          <div class="wrc-calendar-place">
+            <img class="wrc-flag" src="https://resources.redbull.com/icons/flags/v2/SE@2x.png" alt="Sweden" title="Sweden"/>
+            <span>Sweden</span>
+          </div>
+        </div>
+      </div>
+      <!-- Event 3 -->
+      <div class="wrc-calendar-card">
+        <div class="wrc-calendar-img" style="background-image: url('https://img.redbull.com/images/c_fill,g_auto,w_400,h_444/q_auto,f_auto/redbullcom/2025/2/6/hxjwhlhxiep6esw1muoc/wrc-safari-rally-kenya-2024-ford');"></div>
+        <div class="wrc-calendar-body">
+          <h3>WRC Safari Rally Kenya 2025</h3>
+          <div class="wrc-calendar-date"><i class="fa-regular fa-calendar"></i> 20 – 23 March 2025</div>
+          <div class="wrc-calendar-place">
+            <img class="wrc-flag" src="https://resources.redbull.com/icons/flags/v2/KE@2x.png" alt="Kenya" title="Kenya"/>
+            <span>Kenya</span>
+          </div>
+        </div>
+      </div>
+      <!-- Event 4 -->
+      <div class="wrc-calendar-card">
+        <div class="wrc-calendar-img" style="background-image: url('https://img.redbull.com/images/c_fill,g_auto,w_400,h_444/q_auto,f_auto/redbullcom/2025/2/11/yfutiwe2femow468fyng/wrc-toyota-evans-');"></div>
+        <div class="wrc-calendar-body">
+          <h3>WRC Rally Islas Canarias 2025</h3>
+          <div class="wrc-calendar-date"><i class="fa-regular fa-calendar"></i> 24 – 27 April 2025</div>
+          <div class="wrc-calendar-place">
+            <img class="wrc-flag" src="https://resources.redbull.com/icons/flags/v2/ES@2x.png" alt="Spain" title="Spain"/>
+            <span>Spain</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer class="footer">
   <div class="container footer-content">
     <div class="footer-logo-desc">
-      <span class="logo-svg">
-        <svg width="38" height="38" viewBox="0 0 32 32" fill="none">
-          <rect x="2" y="8" width="10" height="16" rx="2" stroke="#f27c1e" stroke-width="2"/>
-          <rect x="20" y="8" width="10" height="16" rx="2" stroke="#f27c1e" stroke-width="2"/>
-          <path d="M12 12L16 16L20 12" stroke="#f27c1e" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </span>
+      <img src="logo-wrc.png" alt="World Rally Logo" class="logo-img-footer" />
       <span class="footer-logo-text"><b>World Rally Championship</b></span>
       <p class="footer-desc">
         Toate informațiile despre Campionatul Mondial de Raliuri, la un click distanță.
@@ -228,7 +158,7 @@
         <a href="#" title="YouTube" class="icon-footer"><i class="fa fa-youtube"></i></a>
       </div>
     </div>
-  </div>
+ </div>
   <div class="footer-bottom">
     Copyright © 2025 World Rally Championship
   </div>
@@ -237,6 +167,7 @@
   document.getElementById('logoutBtn').addEventListener('click', function() {
     window.location.href = "login.html";
   });
-</script>
+</script> 
+<script src="../wrc-timer.js"></script>
 </body>
 </html>
