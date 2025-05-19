@@ -13,17 +13,20 @@
 <header class="navbar">
   <div class="container nav-container">
     <div class="logo-area">
-      <img src="logo-wrc.png" alt="World Rally Logo" class="logo-img" />
+      <img src="./wrclogo.jpg" alt="World Rally Logo" class="logo-img" />
+      <span class="logo-text">WRC Tracker</span>
     </div>
     <nav>
       <ul class="nav-links">
         <li class="active"><a href="#">Acasă</a></li>
-        <li><a href="#">Clasamente</a></li>
         <li><a href="#">Echipe</a></li>
-        <li><a href="#">Evenimente</a></li>
+        <li><a href="#calendar-wrc">Evenimente</a></li>
       </ul>
     </nav>
     <div class="right-actions-navbar">
+      <button id="theme-toggle" class="theme-toggle-btn" title="Schimbă tema">
+  <i id="theme-icon" class="fa fa-moon"></i>
+</button>
       <button id="logoutBtn" class="logout-btn-el">Logout</button>
     </div>
   </div>
@@ -40,7 +43,6 @@
           Descoperă cele mai tari echipe, piloți și mașini din World Rally Championship.<br>
           Fii la curent cu rezultatele live, programul competițional și cele mai spectaculoase momente din motorsportul mondial.
         </p>
-        <button class="comment-btn comment-btn-wrc" onclick="window.location.href='#categorii'">Vezi Clasamentele!</button>
       </div>
       <div class="hero-image hero-image-wrc">
         <img src="./WRC_Central_European_Rallye_2023_Nr._8__4_-removebg-preview.png" alt="Mașină de raliu în acțiune">
@@ -62,7 +64,7 @@
 <section class="wrc-calendar-section">
   <div class="container">
     <h2 class="wrc-calendar-title">WRC 2025 Calendar</h2>
-    <div class="wrc-calendar-grid">
+    <div class="wrc-calendar-grid" id="calendar-wrc">
       <!-- Event 1 -->
       <div class="wrc-calendar-card">
         <div class="wrc-calendar-img" style="background-image: url('https://img.redbull.com/images/c_fill,g_auto,w_400,h_444/q_auto,f_auto/redbullcom/2025/2/5/p8ifmjceehlwj0rqp7sk/wrc-rallye-monte-carlo-2025');"></div>
@@ -118,8 +120,8 @@
 <footer class="footer">
   <div class="container footer-content">
     <div class="footer-logo-desc">
-      <img src="logo-wrc.png" alt="World Rally Logo" class="logo-img-footer" />
-      <span class="footer-logo-text"><b>World Rally Championship</b></span>
+      <img src="./wrc-fia-light.png" alt="World Rally Logo" class="logo-img-footer" />
+      <span class="footer-logo-text"><b>WRC Tracker</b></span>
       <p class="footer-desc">
         Toate informațiile despre Campionatul Mondial de Raliuri, la un click distanță.
       </p>
@@ -150,17 +152,10 @@
         <div>Tel: + (123) 456-7890</div>
         <div>Mail: info@wrc.com</div>
       </div>
-      <div class="footer-socials">
-        <a href="#" title="Facebook" class="icon-footer"><i class="fa fa-facebook"></i></a>
-        <a href="#" title="Pinterest" class="icon-footer"><i class="fa fa-pinterest"></i></a>
-        <a href="#" title="X" class="icon-footer"><i class="fa fa-x-twitter"></i></a>
-        <a href="#" title="Instagram" class="icon-footer"><i class="fa fa-instagram"></i></a>
-        <a href="#" title="YouTube" class="icon-footer"><i class="fa fa-youtube"></i></a>
-      </div>
     </div>
  </div>
   <div class="footer-bottom">
-    Copyright © 2025 World Rally Championship
+    Copyright © 2025 WRC Tracker
   </div>
 </footer>
 <script>
@@ -169,5 +164,6 @@
   });
 </script> 
 <script src="../wrc-timer.js"></script>
+<script src="../main.js"></script>
 </body>
 </html>

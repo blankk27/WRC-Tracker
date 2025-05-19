@@ -18,3 +18,4 @@ function updateWrcCountdown() {
 }
 updateWrcCountdown();
 setInterval(updateWrcCountdown, 1000);
+

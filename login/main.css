@@ -1,9 +1,53 @@
+:root {
+  /* DARK THEME (default) */
+  --primary-bg: #17181c;
+  --primary-text: #e4e4e4;
+  --navbar-bg: #191a20;
+  --footer-bg: #191a20;
+  --accent: #ffb900;
+  --accent-2: #ff8500;
+  --box-bg: #20222a;
+  --box-bg-hover: #23252b;
+  --subtitle: #a6a6a6;
+  --cat-sub: #bdbdbd;
+  --footer-desc: #bbb;
+  --footer-block-link: #e4e4e4;
+  --footer-contacts: #aaa;
+  --footer-bottom: #888;
+  --border: #23252b;
+  --hero-gradient: linear-gradient(135deg, #23252b 0%, #17181c 100%);
+  --calendar-gradient: #18191a;
+  --timer-bg: #18191a;
+}
+
+body.light-mode {
+  --primary-bg: #fff;
+  --primary-text: #232323;
+  --navbar-bg: #fafafa;
+  --footer-bg: #f5f5f5;
+  --accent: #ffb900;
+  --accent-2: #ff8500;
+  --box-bg: #f6f6f6;
+  --box-bg-hover: #fffbe4;
+  --subtitle: #757575;
+  --cat-sub: #9e9e9e;
+  --footer-desc: #999;
+  --footer-block-link: #232323;
+  --footer-contacts: #555;
+  --footer-bottom: #aaa;
+  --border: #e0e0e0;
+  --hero-gradient: linear-gradient(135deg, #fffbe4 0%, #f6f6f6 100%);
+  --calendar-gradient: #f7f7f7;
+  --timer-bg: #f7f7f7;
+}
+
 body {
   font-family: "Inter", "Courier New", Courier, monospace;
-  background: #17181c;
-  color: #e4e4e4;
+  background: var(--primary-bg);
+  color: var(--primary-text);
   margin: 0;
   padding: 0;
+  transition: background 0.3s, color 0.3s;
 }
 
 .container {
@@ -15,11 +59,12 @@ body {
 
 /* Navbar */
 .navbar {
-  background: #191a20;
+  background: var(--navbar-bg);
   box-shadow: 0 2px 12px rgba(44, 44, 44, 0.07);
   position: sticky;
   top: 0;
   z-index: 10;
+  transition: background 0.3s;
 }
 
 .nav-container {
@@ -43,8 +88,9 @@ body {
 .logo-text {
   font-size: 1.34rem;
   font-weight: 700;
-  color: #ffb900;
+  color: var(--accent);
   letter-spacing: 0.5px;
+  text-shadow: 0 2px 16px rgba(255,185,0,0.09);
 }
 
 .nav-links {
@@ -56,7 +102,7 @@ body {
 }
 .nav-links li a {
   text-decoration: none;
-  color: #e4e4e4;
+  color: var(--primary-text);
   font-weight: 500;
   font-size: 1.1rem;
   transition: color 0.18s;
@@ -66,14 +112,14 @@ body {
 }
 .nav-links li.active a,
 .nav-links li a:hover {
-  color: #ffb900;
+  color: var(--accent);
 }
 .nav-links li.active a:after {
   content: '';
   display: block;
   width: 70%;
   margin: 0 auto;
-  border-bottom: 2.5px solid #ffb900;
+  border-bottom: 2.5px solid var(--accent);
   border-radius: 99px;
 }
 
@@ -84,7 +130,7 @@ body {
   margin-left: 60px;
 }
 .logout-btn-el {
-  background: linear-gradient(92deg, #ffb900 60%, #ff8500 100%);
+  background: linear-gradient(92deg, var(--accent) 60%, var(--accent-2) 100%);
   color: #18191a;
   font-size: 1rem;
   font-weight: 700;
@@ -98,14 +144,26 @@ body {
   outline: none;
 }
 .logout-btn-el:hover, .logout-btn-el:focus {
-  background: linear-gradient(92deg, #ff8500 60%, #ffb900 100%);
+  background: linear-gradient(92deg, var(--accent-2) 60%, var(--accent) 100%);
   color: #fff;
   box-shadow: 0 6px 24px rgba(255, 185, 0, 0.13);
+}
+.theme-toggle-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--primary-text);
+  margin-right: 14px;
+  transition: color 0.2s;
+}
+.theme-toggle-btn:hover {
+  color: var(--accent);
 }
 
 /* HERO SECTION */
 .hero {
-  background: linear-gradient(135deg, #23252b 0%, #17181c 100%);
+  background: var(--hero-gradient);
   padding: 46px 0 28px 0;
 }
 .hero-content-wrc {
@@ -126,7 +184,7 @@ body {
 }
 .hero-text-wrc h1 {
   font-size: 2.2rem;
-  color: #ffb900;
+  color: var(--accent);
   margin-bottom: 14px;
   font-weight: 800;
   line-height: 1.14;
@@ -137,7 +195,8 @@ body {
 }
 .hero-text-wrc p {
   font-size: 1.08rem;
-  color: #ececec;
+  color: var(--primary-text);
+  opacity: 0.95;
   margin-bottom: 20px;
   text-align: center;
   max-width: 480px;
@@ -145,7 +204,7 @@ body {
   line-height: 1.5;
 }
 .comment-btn-wrc {
-  background: linear-gradient(92deg, #ffb900 60%, #ff8500 100%);
+  background: linear-gradient(92deg, var(--accent) 60%, var(--accent-2) 100%);
   color: #18191a;
   border: none;
   border-radius: 8px;
@@ -160,7 +219,7 @@ body {
   box-shadow: 0 3px 12px rgba(255,185,0,0.08);
 }
 .comment-btn-wrc:hover, .comment-btn-wrc:focus {
-  background: linear-gradient(92deg, #ff8500 60%, #ffb900 100%);
+  background: linear-gradient(92deg, var(--accent-2) 60%, var(--accent) 100%);
   color: #fff;
 }
 .hero-image-wrc {
@@ -173,12 +232,11 @@ body {
   width: 250px;
   height: 210px;
   object-fit: cover;
-
 }
 
 /* CATEGORII */
 .categories {
-  background: #18191a;
+  background: var(--primary-bg);
   padding: 32px 0 29px 0;
 }
 .header-row {
@@ -191,17 +249,17 @@ body {
 .left-header h2 {
   font-size: 1.35rem;
   margin: 0 0 4px 0;
-  color: #ffb900;
+  color: var(--accent);
   font-weight: 700;
   letter-spacing: 0.03em;
 }
 .subtitle {
   font-size: 0.93rem;
-  color: #a6a6a6;
+  color: var(--subtitle);
   margin: 0;
 }
 .all-categories-btn {
-  background: linear-gradient(92deg, #ffb900 60%, #ff8500 100%);
+  background: linear-gradient(92deg, var(--accent) 60%, var(--accent-2) 100%);
   color: #18191a;
   border: none;
   border-radius: 8px;
@@ -214,7 +272,7 @@ body {
   box-shadow: 0 2px 9px rgba(255,185,0,0.07);
 }
 .all-categories-btn:hover, .all-categories-btn:focus {
-  background: linear-gradient(92deg, #ff8500 60%, #ffb900 100%);
+  background: linear-gradient(92deg, var(--accent-2) 60%, var(--accent) 100%);
   color: #fff;
 }
 .grid-wrc {
@@ -223,13 +281,13 @@ body {
   gap: 14px;
 }
 .cat-box {
-  background: #20222a;
+  background: var(--box-bg);
   border-radius: 10px;
   padding: 10px 7px 10px 7px;
   text-align: center;
   font-size: 0.99rem;
   font-weight: 600;
-  color: #ececec;
+  color: var(--primary-text);
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -243,14 +301,14 @@ body {
 }
 .cat-box.active,
 .cat-box:hover {
-  border: 2px solid #ffb900;
-  background: #23252b;
-  color: #ffb900;
+  border: 2px solid var(--accent);
+  background: var(--box-bg-hover);
+  color: var(--accent);
 }
 .cat-icon {
   font-size: 1.45em;
   margin-bottom: 0px;
-  color: #ffb900;
+  color: var(--accent);
   display: block;
 }
 .cat-title {
@@ -260,17 +318,18 @@ body {
 }
 .cat-sub {
   font-size: 0.87em;
-  color: #bdbdbd;
+  color: var(--cat-sub);
   font-weight: 400;
 }
 
 /* Footer */
 .footer {
-  background: #191a20;
-  color: #e4e4e4;
+  background: var(--footer-bg);
+  color: var(--primary-text);
   margin-top: 0;
   padding-top: 38px;
-  border-top: 4px solid #ffb900;
+  border-top: 4px solid var(--accent);
+  transition: background 0.3s, color 0.3s;
 }
 .footer-content {
   display: flex;
@@ -288,12 +347,13 @@ body {
   flex-direction: column;
   gap: 12px;
 }
-.footer-logo-text {
+.footer-logo-text,
+.logo-text-footer {
   font-size: 1.09rem;
-  color: #ffb900;
+  color: var(--accent);
 }
 .footer-desc {
-  color: #bbb;
+  color: var(--footer-desc);
   font-size: 0.95rem;
 }
 .footer-block {
@@ -301,7 +361,7 @@ body {
   min-width: 140px;
 }
 .footer-block h4 {
-  color: #ffb900;
+  color: var(--accent);
   font-size: 0.96rem;
   margin-bottom: 10px;
   margin-top: 0;
@@ -316,17 +376,17 @@ body {
   margin-bottom: 7px;
 }
 .footer-block a {
-  color: #e4e4e4;
+  color: var(--footer-block-link);
   text-decoration: none;
   transition: color 0.18s;
 }
 .footer-block a:hover,
 .footer-block .highlight-orange {
-  color: #ffb900;
+  color: var(--accent);
 }
 .footer-contacts {
   margin: 7px 0;
-  color: #aaa;
+  color: var(--footer-contacts);
   font-size: 0.95rem;
 }
 .footer-socials {
@@ -335,7 +395,7 @@ body {
 .icon-footer {
   display: inline-block;
   margin-right: 9px;
-  color: #ffb900;
+  color: var(--accent);
   font-size: 1.13rem;
   transition: color 0.2s;
 }
@@ -343,8 +403,8 @@ body {
   color: #fff;
 }
 .footer-bottom {
-  border-top: 1px solid #222;
-  color: #888;
+  border-top: 1px solid var(--border);
+  color: var(--footer-bottom);
   text-align: center;
   padding: 13px 0 0 0;
   margin-top: 13px;
@@ -396,7 +456,8 @@ body {
   .container {
     padding: 6px 2vw 10px 2vw;
   }
-  .footer-logo-text {
+  .footer-logo-text,
+  .logo-text-footer {
     font-size: 0.99rem;
   }
   .footer-block h4 {
@@ -404,7 +465,7 @@ body {
   }
 }
 
-/* HERO SECTION - MODIFICĂRI PENTRU FULL BACKGROUND ȘI CENTRARE, FONT ȘI POZĂ MAI MARI */
+/* HERO SECTION - FULL BACKGROUND ETC */
 .hero {
   width: 100vw;
   position: relative;
@@ -412,7 +473,7 @@ body {
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  background-image: url('https://www.rallycross.lv/uploads/news/e84648efd1518a6729a9e532d03326de00e964f1.jpg');
+  background-image: url('https://sites.create-cdn.net/siteimages/19/3/4/193478/18/8/8/18884712/1920x1080.jpg?1605191096');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -446,19 +507,24 @@ body {
   text-align: center;
 }
 .hero-text-wrc h1 {
-  font-size: 2.85rem;  /* creștem fontul */
-  color: #ffb900;
+  font-size: 2.85rem;
+  color: var(--accent);
   margin-bottom: 20px;
   font-weight: 900;
   line-height: 1.12;
   text-align: center;
   max-width: 650px;
   letter-spacing: 0.05em;
-  text-shadow: 0 2px 24px rgba(255,185,0,0.13);
+  text-shadow:
+    0 6px 36px #000,
+    0 2px 0 #ffb900,
+    0 0px 40px #ffb900aa,
+    0 12px 60px #000;
 }
 .hero-text-wrc p {
   font-size: 1.25rem;
-  color: #ececec;
+  color: var(--primary-text);
+  opacity: 0.97;
   margin-bottom: 32px;
   text-align: center;
   max-width: 540px;
@@ -478,24 +544,21 @@ body {
   justify-content: center;
   align-items: center;
 }
-/* HERO IMAGE FĂRĂ BORDER, FULL, CU SHADOW MAI PRONUNȚAT */
 .hero-image-wrc img {
   width: 100%;
   max-width: 480px;
   height: auto;
   object-fit: contain;
   border-radius: 22px;
-  /* border: 4px solid #20222a;  <-- eliminat */
   margin: 0 auto;
   background: transparent;
   display: block;
-
 }
 
 /* SHADOW PUTERNIC PE TITLU PRINCIPAL */
 .hero-text-wrc h1 {
   font-size: 2.85rem;
-  color: #ffb900;
+  color: var(--accent);
   margin-bottom: 20px;
   font-weight: 900;
   line-height: 1.12;
@@ -509,7 +572,6 @@ body {
     0 12px 60px #000;
 }
 
-/* RESPONSIVE (opțional, pentru mobil/tabletă) */
 @media (max-width: 1100px) {
   .hero-content-wrc {
     gap: 32px;
@@ -534,7 +596,7 @@ body {
 }
 
 .wrc-timer-section {
-  background: #18191a;
+  background: var(--timer-bg);
   padding: 48px 0 49px 0;
   display: flex;
   align-items: center;
@@ -548,7 +610,7 @@ body {
 }
 .wrc-timer-title {
   font-size: 2rem;
-  color: #ffb900;
+  color: var(--accent);
   font-weight: 800;
   letter-spacing: 0.05em;
   margin-bottom: 24px;
@@ -563,14 +625,14 @@ body {
   gap: 28px;
   font-size: 2.5rem;
   font-weight: 800;
-  color: #fff;
+  color: var(--primary-text);
   text-shadow: 0 5px 32px #000, 0 1px 0 #ffb900bb;
   letter-spacing: 0.08em;
   justify-content: center;
   align-items: center;
 }
 .wrc-timer-countdown span {
-  background: linear-gradient(92deg, #ffb900 60%, #ff8500 100%);
+  background: linear-gradient(92deg, var(--accent) 60%, var(--accent-2) 100%);
   color: #18191a;
   border-radius: 13px;
   padding: 16px 20px;
@@ -584,7 +646,7 @@ body {
 .wrc-timer-countdown small {
   display: block;
   font-size: 0.75rem;
-  color: #fff;
+  color: var(--primary-text);
   font-weight: 600;
   letter-spacing: 0.02em;
   margin-top: 6px;
@@ -597,7 +659,7 @@ body {
 }
 
 .wrc-calendar-section {
-  background: #18191a;
+  background: var(--calendar-gradient);
   padding: 36px 0 42px 0;
   display: flex;
   flex-direction: column;
@@ -607,7 +669,7 @@ body {
 .wrc-calendar-title {
   font-size: 2rem;
   font-weight: 800;
-  color: #ffb900;
+  color: var(--accent);
   letter-spacing: 0.03em;
   margin-bottom: 36px;
   text-align: center;
@@ -625,7 +687,7 @@ body {
 }
 
 .wrc-calendar-card {
-  background: #20222a;
+  background: var(--box-bg);
   border-radius: 18px;
   box-shadow: 0 3px 28px #16171a44, 0 1.5px 6px #ffb90022;
   overflow: hidden;
@@ -634,12 +696,14 @@ body {
   max-width: 98vw;
   display: flex;
   flex-direction: column;
-  transition: transform 0.18s, box-shadow 0.18s;
+  transition: transform 0.18s, box-shadow 0.18s, background 0.3s, color 0.3s;
   cursor: pointer;
+  border: 1px solid var(--border);
 }
 .wrc-calendar-card:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 8px 30px #ffb90033, 0 2px 18px #00000033;
+  background: var(--box-bg-hover);
 }
 .wrc-calendar-img {
   width: 100%;
@@ -660,13 +724,13 @@ body {
 .wrc-calendar-body h3 {
   font-size: 1.13rem;
   font-weight: 800;
-  color: #fff;
+  color: var(--primary-text);
   margin: 0 0 2px 0;
   letter-spacing: 0.01em;
 }
 .wrc-calendar-date {
   font-size: 1rem;
-  color: #ffb900;
+  color: var(--accent);
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -677,7 +741,7 @@ body {
 }
 .wrc-calendar-place {
   font-size: 0.97rem;
-  color: #f0f0f0;
+  color: var(--primary-text);
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -725,45 +789,6 @@ body {
   }
 }
 
-.wrc-calendar-grid {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 28px;
-  justify-content: center;
-}
-
-.wrc-calendar-place {
-  font-size: 0.97rem;
-  color: #f0f0f0;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
-
-.wrc-country-flag {
-  font-size: 1.12em;
-  margin-left: 3px;
-}
-
-@media (max-width: 1260px) {
-  .wrc-calendar-grid {
-    flex-wrap: wrap;
-    gap: 18px;
-  }
-}
-@media (max-width: 950px) {
-  .wrc-calendar-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-  .wrc-calendar-card {
-    width: 95vw;
-    min-width: 220px;
-    max-width: 99vw;
-  }
-}
-
 .logo-img {
   height: 38px;
   width: auto;
@@ -776,3 +801,164 @@ body {
   display: block;
   margin-bottom: 10px;
 }
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-right: 350px;
+}
+.logo-text {
+  font-size: 1.32rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 16px rgba(255,185,0,0.09);
+}
+
+.footer-logo-desc {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.logo-img-footer {
+  height: 38px;
+  width: auto;
+  margin-bottom: 0;
+  margin-right: 0;
+  display: block;
+}
+
+.logo-text-footer {
+  font-size: 1.32rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 16px rgba(255,185,0,0.09);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.wrc-calendar-section {
+  background: var(--calendar-gradient);
+  padding: 36px 0 42px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrc-calendar-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: 0.03em;
+  margin-bottom: 36px;
+  text-align: center;
+  text-shadow:
+    0 4px 22px #000,
+    0 1px 0 #ffb90099,
+    0 0px 18px #ffb90044;
+}
+
+.wrc-calendar-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrc-calendar-card {
+  background: var(--box-bg);
+  border-radius: 18px;
+  box-shadow: 0 3px 28px #16171a44, 0 1.5px 6px #ffb90022;
+  overflow: hidden;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.18s, box-shadow 0.18s, background 0.3s, color 0.3s;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.wrc-calendar-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 30px #ffb90033, 0 2px 18px #00000033;
+  background: var(--box-bg-hover);
+}
+
+.wrc-calendar-img {
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  box-shadow: 0 2px 16px #000a;
+}
+
+.wrc-calendar-body {
+  padding: 18px 16px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wrc-calendar-body h3 {
+  font-size: 1.13rem;
+  font-weight: 800;
+  color: var(--primary-text);
+  margin: 0 0 2px 0;
+  letter-spacing: 0.01em;
+}
+
+.wrc-calendar-date {
+  font-size: 1rem;
+  color: var(--accent);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.wrc-calendar-date i {
+  font-size: 1.03em;
+}
+
+.wrc-calendar-place {
+  font-size: 0.97rem;
+  color: var(--primary-text);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.wrc-flag {
+  font-size: 1.2em;
+  display: inline-block;
+}
+
+@media (max-width: 1260px) {
+  .wrc-calendar-grid {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 950px) {
+  .wrc-calendar-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .wrc-calendar-card {
+    width: 95%;
+  }
+}
+
