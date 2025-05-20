@@ -5,32 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Înregistrare</title>
   <link rel="stylesheet" href="register.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="register-bg">
-    <form class="register-form" id="registerForm" autocomplete="off">
-      <div class="form-row">
-        <label for="nume">Nume</label>
-        <div class="form-input-double">
-          <input type="text" id="nume" name="nume" placeholder="Nume" required>
-          <input type="text" id="prenume" name="prenume" placeholder="Prenume" required>
+    <div class="register-container">
+      <img src="./wrclogo.jpg" alt="WRC Logo" class="register-wrc-logo">
+      <form class="register-form" id="registerForm" autocomplete="off">
+        <div class="register-title">Creează cont nou</div>
+        <div class="form-row">
+          <label for="nume">Nume</label>
+          <div class="form-input-double">
+            <input type="text" id="nume" name="nume" placeholder="Nume" required>
+            <input type="text" id="prenume" name="prenume" placeholder="Prenume" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="exemplu@email.com" required>
+        </div>
+        <div class="form-row">
+          <label for="telefon">Telefon</label>
+          <input type="text" id="telefon" name="telefon" placeholder="Număr de telefon" maxlength="20" required>
+        </div>
+        <span class="error-message" id="error-message"></span>
+        <button type="submit">Înregistrează-te</button>
+        <div class="redirect-login">
+          Ai deja cont? <a href="../login/login.html">Login</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-logo-desc">
+        <img src="./wrclogo.jpg" alt="World Rally Logo" class="logo-img-footer" />
+        <span class="footer-logo-text"><b>WRC Tracker</b></span>
+        <p class="footer-desc">
+          Toate informațiile despre Campionatul Mondial de Raliuri, la un click distanță.
+        </p>
+      </div>
+      <div class="footer-block">
+        <h4>SUPORT</h4>
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Articole</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-block">
+        <h4>WRC</h4>
+        <ul>
+          <li><a href="#">Clasamente</a></li>
+          <li><a href="../echipe-piloti.html">Echipe</a></li>
+          <li><a href="../main.html#calendar-wrc">Evenimente</a></li>
+        </ul>
+      </div>
+      <div class="footer-block">
+        <h4>CONTACT</h4>
+        <address>
+          Adresă: Str. Motorsport, Nr. 10<br>
+          Monte Carlo, Monaco
+        </address>
+        <div class="footer-contacts">
+          <div>Tel: + (123) 456-7890</div>
+          <div>Mail: info@wrc.com</div>
         </div>
       </div>
-      <div class="form-row">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="exemplu@email.com" required>
-      </div>
-      <div class="form-row">
-        <label for="telefon">Telefon</label>
-        <input type="text" id="telefon" name="telefon" placeholder="Număr de telefon" maxlength="20" required>
-      </div>
-      <span class="error-message" id="error-message"></span>
-      <button type="submit">Înregistrează-te</button>
-      <div class="redirect-login">
-        Ai deja cont? <a href="../login/login.html">Login</a>
-      </div>
-    </form>
-  </div>
+    </div>
+    <div class="footer-bottom">
+      Copyright © 2025 WRC Tracker
+    </div>
+  </footer>
   <script src="../register.js"></script>
 </body>
 </html>

@@ -5,23 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
   <link rel="stylesheet" href="login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="login-bg">
-    <div class="login-box">
-      <h2>Login</h2>
-      <form id="loginForm" autocomplete="off">
-        <input type="text" id="nume" name="nume" placeholder="Numele" required>
-        <input type="text" id="prenume" name="prenume" placeholder="Prenumele" required>
-        <input type="password" id="parola" name="parola" placeholder="Parola" required>
-        <span class="error-message" id="error-message"></span>
-        <button type="submit">Autentificare</button>
-      </form>
-      <div class="redirect-register">
-        Nu ai cont? <a href="../register/register.html">Înregistrează-te</a>
+    <div class="login-container">
+      <img src="./wrclogo.jpg" alt="WRC Logo" class="login-wrc-logo">
+      <div class="login-box">
+        <div class="login-title">Autentificare în cont</div>
+        <form id="loginForm" autocomplete="off">
+          <input type="text" id="nume" name="nume" placeholder="Numele" required>
+          <input type="text" id="prenume" name="prenume" placeholder="Prenumele" required>
+          <input type="password" id="parola" name="parola" placeholder="Parola" required>
+          <span class="error-message" id="error-message"></span>
+          <button type="submit">Autentificare</button>
+        </form>
+        <div class="redirect-register">
+          Nu ai cont? <a href="../register/register.html">Înregistrează-te</a>
+        </div>
       </div>
     </div>
   </div>
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-logo-desc">
+        <img src="./wrclogo.jpg" alt="World Rally Logo" class="logo-img-footer" />
+        <span class="footer-logo-text"><b>WRC Tracker</b></span>
+        <p class="footer-desc">
+          Toate informațiile despre Campionatul Mondial de Raliuri, la un click distanță.
+        </p>
+      </div>
+      <div class="footer-block">
+        <h4>SUPORT</h4>
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Articole</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-block">
+        <h4>WRC</h4>
+        <ul>
+          <li><a href="#">Clasamente</a></li>
+          <li><a href="../echipe-piloti.html">Echipe</a></li>
+          <li><a href="../main.html#calendar-wrc">Evenimente</a></li>
+        </ul>
+      </div>
+      <div class="footer-block">
+        <h4>CONTACT</h4>
+        <address>
+          Adresă: Str. Motorsport, Nr. 10<br>
+          Monte Carlo, Monaco
+        </address>
+        <div class="footer-contacts">
+          <div>Tel: + (123) 456-7890</div>
+          <div>Mail: info@wrc.com</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Copyright © 2025 WRC Tracker
+    </div>
+  </footer>
   <script>
     document.getElementById('loginForm').addEventListener('submit', function(e) {
       e.preventDefault();

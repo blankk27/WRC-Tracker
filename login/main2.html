@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Echipe și Piloți - World Rally Championship</title>
+  <link rel="stylesheet" href="main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+<!-- Navbar -->
+<header class="navbar">
+  <div class="container nav-container">
+    <div class="logo-area">
+      <img src="./wrclogo.jpg" alt="World Rally Logo" class="logo-img" />
+      <span class="logo-text">WRC Tracker</span>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="main.html">Acasă</a></li>
+        <li class="active"><a href="echipe-piloti.html">Echipe</a></li>
+        <li><a href="main.html#calendar-wrc">Evenimente</a></li>
+      </ul>
+    </nav>
+    <div class="right-actions-navbar">
+      <button id="theme-toggle" class="theme-toggle-btn" title="Schimbă tema">
+        <i id="theme-icon" class="fa fa-moon"></i>
+      </button>
+      <button id="logoutBtn" class="logout-btn-el">Logout</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO Section Echipe și Piloți -->
+  <section class="hero hero-wrc">
+    <div class="container hero-content hero-content-wrc">
+      <div class="hero-text hero-text-wrc">
+        <h1>Echipe & Piloți WRC 2025</h1>
+        <p>
+          Descoperă echipele de top, piloții legendari și mașinile spectaculoase ce animă sezonul World Rally Championship 2025!
+        </p>
+      </div>
+      <div class="hero-image hero-image-wrc">
+        <img src="./pilotiwrc.jpg" alt="Echipe și Piloți WRC">
+      </div>
+    </div>
+  </section>
+
+  <!-- Secțiunea Echipe și Piloți -->
+  <section class="wrc-teams-section">
+    <div class="container">
+      <h2 class="wrc-calendar-title">Echipe de Top & Piloți Sezon 2025</h2>
+      <div class="wrc-teams-grid">
+        <!-- Echipa 1 -->
+        <div class="wrc-team-card">
+          <div class="wrc-team-car">
+            <img src="https://img.redbull.com/images/c_crop,x_0,y_323,h_3375,w_6000/c_fill,w_500,h_294/q_auto,f_auto/redbullcom/2025/2/18/cf3kmvbzljkzlilnn5c7/toyota-gazoo-racing-world-rally-team" alt="Toyota GR Yaris Rally1" />
+          </div>
+          <div class="wrc-team-body">
+            <h3>Toyota Gazoo Racing WRT</h3>
+            <div class="wrc-team-country"><img class="wrc-flag" src="https://resources.redbull.com/icons/flags/v2/JP@2x.png" alt="Japonia" title="Japonia"/> Japonia</div>
+            <div class="wrc-drivers">
+              <div class="wrc-driver"><img src="https://img.redbull.com/images/c_fill,g_auto,w_300,h_300/q_auto,f_auto/wrc/2025/2/10/ogier-9jpg/d8333398-c016-3a93-82ed-68a7b441604a" alt="Sébastien Ogier" class="wrc-driver-img"/> <span>Sébastien Ogier</span></div>
+              <div class="wrc-driver"><img src="https://img.redbull.com/images/c_fill,g_auto,w_300,h_300/q_auto,f_auto/wrc/2025/2/10/evans-9jpg/1ed4a402-1470-3301-bd59-56938c318d80" alt="Elfyn Evans" class="wrc-driver-img"/> <span>Elfyn Evans</span></div>
+              <div class="wrc-driver"><img src="https://img.redbull.com/images/c_fill,g_auto,w_300,h_300/q_auto,f_auto/wrc/2025/2/10/rovanpera-6jpg/bbc351ee-cea4-3f57-89e3-5105c232b293" alt="Kalle Rovanperä" class="wrc-driver-img"/> <span>Kalle Rovanperä</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- Echipa 2 -->
+        <div class="wrc-team-card">
+          <div class="wrc-team-car">
+            <img src="https://img.redbull.com/images/c_crop,x_0,y_246,h_2160,w_3840/c_fill,w_500,h_294/q_auto,f_auto/wrc/2025/2/10/hyundai-i20-20252jpg/cd224c46-a420-339e-99a1-b92dece852a5" alt="Hyundai i20 N Rally1" />
+          </div>
+          <div class="wrc-team-body">
+            <h3>Hyundai Shell Mobis WRT</h3>
+            <div class="wrc-team-country"><img class="wrc-flag" src="https://resources.redbull.com/icons/flags/v2/KR@2x.png" alt="Coreea de Sud" title="Coreea de Sud"/> Coreea de Sud</div>
+            <div class="wrc-drivers">
+              <div class="wrc-driver"><img src="https://img.redbull.com/images/c_fill,g_auto,w_300,h_300/q_auto,f_auto/wrc/2025/2/10/neuville-2jpg/a8941e4a-46f7-338c-a4de-b2120e5d9ee7" alt="Thierry Neuville" class="wrc-driver-img"/> <span>Thierry Neuville</span></div>
+              <div class="wrc-driver"><img src="https://img.redbull.com/images/c_fill,g_auto,w_300,h_300/q_auto,f_auto/wrc/2025/2/10/tanak-5jpg/2c0d4c77-64c8-3a1d-a73e-2cc95dc000cb" alt="Ott Tänak" class="wrc-driver-img"/> <span>Ott Tänak</span></div>
+              <div class="wrc-driver"><img src="https://img.redbull.com/images/c_fill,g_auto,w_300,h_300/q_auto,f_auto/erc/2025/2/10/salminenjpg/aa157a76-ef58-3399-b0d9-fb1d18a890c3" alt="Marko Salminen" class="wrc-driver-img"/> <span>Marko Salminen</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- Echipa 3 -->
+        <div class="wrc-team-card">
+          <div class="wrc-team-car">
+            <img src="https://img.redbull.com/images/c_crop,x_0,y_193,h_2160,w_3840/c_fill,w_500,h_294/q_auto,f_auto/wrc/2025/2/10/ford-puma-20252jpg/8d052ddc-53f5-36c0-b65d-aef56e7342f9" alt="Ford Puma Rally1" />
+          </div>
+          <div class="wrc-team-body">
+            <h3>M-Sport Ford WRT</h3>
+            <div class="wrc-team-country"><img class="wrc-flag" src="https://resources.redbull.com/icons/flags/v2/GB@2x.png" alt="Marea Britanie" title="Marea Britanie"/> Marea Britanie</div>
+            <div class="wrc-drivers">
+              <div class="wrc-driver"><img src="https://img.redbull.com/images/c_fill,g_auto,w_300,h_300/q_auto,f_auto/wrc/2025/2/10/formauxjpg/3c507a3a-ca4c-3a85-b279-c00d21d64ef0" alt="Adrien Fourmaux" class="wrc-driver-img"/> <span>Adrien Fourmaux</span></div>
+              <div class="wrc-driver"><img src="https://img.redbull.com/images/c_fill,g_auto,w_300,h_300/q_auto,f_auto/wrc/2025/2/10/munster-3jpg/1456dd9b-d04c-366d-9773-ed1538636fcd" alt="Grégoire Munster" class="wrc-driver-img"/> <span>Grégoire Munster</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- Alte echipe/piloți pot fi adăugați la nevoie -->
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-logo-desc">
+      <img src="./wrclogo.jpg" alt="World Rally Logo" class="logo-img-footer" />
+      <span class="footer-logo-text"><b>WRC Tracker</b></span>
+      <p class="footer-desc">
+        Toate informațiile despre Campionatul Mondial de Raliuri, la un click distanță.
+      </p>
+    </div>
+    <div class="footer-block">
+      <h4>SUPORT</h4>
+      <ul>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Articole</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-block">
+      <h4>WRC</h4>
+      <ul>
+        <li><a href="#">Clasamente</a></li>
+        <li><a href="echipe-piloti.html">Echipe</a></li>
+        <li><a href="main.html#calendar-wrc">Evenimente</a></li>
+      </ul>
+    </div>
+    <div class="footer-block">
+      <h4>CONTACT</h4>
+      <address>
+        Adresă: Str. Motorsport, Nr. 10<br>
+        Monte Carlo, Monaco
+      </address>
+      <div class="footer-contacts">
+        <div>Tel: + (123) 456-7890</div>
+        <div>Mail: info@wrc.com</div>
+      </div>
+    </div>
+ </div>
+  <div class="footer-bottom">
+    Copyright © 2025 WRC Tracker
+  </div>
+</footer>
+<script>
+  document.getElementById('logoutBtn').addEventListener('click', function() {
+    window.location.href = "login.html";
+  });
+</script>
+<script src="../main.js"></script>
+</body>
+</html>

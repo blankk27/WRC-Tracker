@@ -3,22 +3,47 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Inter', Arial, sans-serif;
-  background: #fafbff;
+  background: var(--primary-bg, #18191a);
+  color: var(--primary-text, #e4e4e4);
 }
 
 .register-bg {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0d1d4a 0%, #263d8a 100%);
+  background: linear-gradient(135deg, #18191a 0%, #23252b 100%);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.register-wrc-logo {
+  width: 78px;
+  height: auto;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 26px #ffb90044;
+  background: #fff;
+  padding: 4px 8px;
+  object-fit: contain;
+  display: block;
 }
 
 .register-form {
-  background: #fff;
-  padding: 38px 36px 28px 36px;
+  background: var(--box-bg, #20222a);
+  padding: 38px 34px 28px 34px;
   border-radius: 18px;
-  box-shadow: 0 8px 40px rgba(13, 29, 74, 0.18);
+  box-shadow: 0 8px 40px #ffb90033, 0 2px 16px #000a;
   min-width: 340px;
   max-width: 420px;
   width: 100%;
@@ -28,13 +53,14 @@ body, html {
   align-items: stretch;
 }
 
-.register-form h2 {
-  margin-bottom: 22px;
+.register-title {
+  margin-bottom: 18px;
   font-weight: 800;
-  color: #1a237e;
-  letter-spacing: 1px;
-  font-size: 26px;
+  color: var(--accent, #ffb900);
+  letter-spacing: 0.5px;
+  font-size: 1.45rem;
   text-align: center;
+  text-shadow: 0 4px 14px #000a, 0 1px 0 #ffb90033;
 }
 
 .form-row {
@@ -44,9 +70,9 @@ body, html {
 }
 
 .form-row > label {
-  flex: 0 0 90px;
+  flex: 0 0 75px;
   font-size: 15px;
-  color: #263d8a;
+  color: var(--accent, #ffb900);
   font-weight: 600;
   padding-top: 13px;
   letter-spacing: 0.2px;
@@ -67,22 +93,22 @@ input[type="text"], input[type="email"] {
   width: 100%;
   padding: 13px 15px;
   border: none;
-  border-radius: 7px;
-  background: #f6f7fb;
+  border-radius: 8px;
+  background: var(--box-bg-hover, #23252b);
   font-size: 15px;
-  color: #122249;
+  color: var(--primary-text, #e4e4e4);
   box-sizing: border-box;
   font-family: inherit;
   outline: none;
-  transition: background 0.18s;
-  box-shadow: 0 2px 8px rgba(38, 61, 138, 0.04);
-  border: 1.7px solid #263d8a;
+  transition: background 0.18s, border 0.18s;
+  box-shadow: 0 2px 8px #ffb90011;
+  border: 2px solid transparent;
 }
 
 input[type="text"]:focus, input[type="email"]:focus {
-  background: #e9eeff;
-  border: 2px solid #1a237e;
-  box-shadow: 0 4px 16px rgba(38, 61, 138, 0.10);
+  background: #23252b;
+  border: 2px solid var(--accent, #ffb900);
+  box-shadow: 0 4px 16px #ffb90022;
 }
 
 input[type="email"] {
@@ -90,7 +116,7 @@ input[type="email"] {
 }
 
 .error-message {
-  color: #e84118;
+  color: #ff8500;
   font-size: 14px;
   min-height: 20px;
   margin-bottom: -5px;
@@ -98,38 +124,40 @@ input[type="email"] {
   width: 100%;
   display: block;
   text-align: center;
+  letter-spacing: 0.07em;
 }
 
 button[type="submit"] {
   width: 100%;
-  background: linear-gradient(90deg, #263d8a, #0d1d4a);
-  color: #fff;
+  background: linear-gradient(90deg, #ffb900 60%, #ff8500 100%);
+  color: #18191a;
   padding: 13px 0;
   border: none;
-  border-radius: 7px;
-  font-size: 17px;
+  border-radius: 8px;
+  font-size: 1.10rem;
   font-weight: 700;
   cursor: pointer;
   margin-top: 8px;
-  letter-spacing: 0.5px;
-  box-shadow: 0 2px 12px rgba(38, 61, 138, 0.10);
-  transition: background 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.07em;
+  box-shadow: 0 2px 12px #ffb90022;
+  transition: background 0.2s, box-shadow 0.2s, color 0.18s;
 }
 
-button[type="submit"]:hover {
-  background: linear-gradient(90deg, #0d1d4a, #263d8a);
-  box-shadow: 0 6px 24px rgba(38, 61, 138, 0.13);
+button[type="submit"]:hover, button[type="submit"]:focus {
+  background: linear-gradient(92deg, #ff8500 60%, #ffb900 100%);
+  color: #fff;
+  box-shadow: 0 6px 22px #ffb90044;
 }
 
 .redirect-login {
-  margin-top: 22px;
+  margin-top: 12px;
   font-size: 15px;
-  color: #263d8a;
+  color: var(--primary-text, #e4e4e4);
   text-align: center;
 }
 
 .redirect-login a {
-  color: #263d8a;
+  color: var(--accent, #ffb900);
   text-decoration: none;
   font-weight: 700;
   margin-left: 3px;
@@ -137,11 +165,95 @@ button[type="submit"]:hover {
 }
 
 .redirect-login a:hover {
-  color: #f27c1e;
+  color: #ff8500;
   text-decoration: underline;
 }
 
-@media (max-width: 540px) {
+.footer {
+  background: var(--footer-bg, #191a20);
+  color: var(--primary-text, #e4e4e4);
+  margin-top: 0;
+  padding-top: 38px;
+  border-top: 4px solid var(--accent, #ffb900);
+  transition: background 0.3s, color 0.3s;
+  font-size: 1rem;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 38px 22px;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 22px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-logo-desc {
+  flex: 1 1 250px;
+  min-width: 200px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-logo-text,
+.logo-text-footer {
+  font-size: 1.09rem;
+  color: var(--accent, #ffb900);
+}
+.footer-desc {
+  color: #bbb;
+  font-size: 0.95rem;
+}
+.footer-block {
+  flex: 1 1 160px;
+  min-width: 140px;
+}
+.footer-block h4 {
+  color: var(--accent, #ffb900);
+  font-size: 0.96rem;
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-weight: 700;
+}
+.footer-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-block li {
+  margin-bottom: 7px;
+}
+.footer-block a {
+  color: #e4e4e4;
+  text-decoration: none;
+  transition: color 0.18s;
+}
+.footer-block a:hover,
+.footer-block .highlight-orange {
+  color: var(--accent, #ffb900);
+}
+.footer-contacts {
+  margin: 7px 0;
+  color: #aaa;
+  font-size: 0.95rem;
+}
+.footer-bottom {
+  border-top: 1px solid #23252b;
+  color: #888;
+  text-align: center;
+  padding: 13px 0 0 0;
+  margin-top: 13px;
+  font-size: 0.95rem;
+}
+.logo-img-footer {
+  height: 32px;
+  width: 32px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+@media (max-width: 600px) {
   .register-form {
     max-width: 98vw;
     min-width: unset;
@@ -158,5 +270,14 @@ button[type="submit"]:hover {
   .form-input-double {
     flex-direction: column;
     gap: 8px;
+  }
+  .register-wrc-logo {
+    width: 52px;
+    margin-bottom: 9px;
+  }
+  .footer-content {
+    gap: 14px 5px;
+    flex-direction: column;
+    align-items: flex-start !important;
   }
 }
